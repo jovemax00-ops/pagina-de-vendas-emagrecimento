@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método Emagrecimento Real</title>
+  <meta name="description" content="Retome o controle do seu peso em 21 dias sem dieta maluca, sem radicalismo e sem viver recomeçando." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
+    a { text-decoration: none; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .hero {
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 35%), #0a0a0a;
+    }
+    .hero-inner { padding: 100px 0; max-width: 760px; }
+    .badge {
+      display: inline-block; padding: 10px 16px; border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05); border-radius: 999px; font-size: 14px;
+      color: rgba(255,255,255,0.85); margin-bottom: 24px;
+    }
+    h1 { font-size: 56px; line-height: 1.1; font-weight: 700; letter-spacing: -1px; }
+    .hero p { font-size: 20px; color: rgba(255,255,255,0.75); margin-top: 24px; max-width: 680px; }
+    .button-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 36px; }
+    .btn {
+      display: inline-block; padding: 16px 24px; border-radius: 18px;
+      font-weight: 700; transition: 0.2s ease; text-align: center;
+    }
+    .btn-primary { background: #fff; color: #111; }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05); color: #fff;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+    .hero-note { margin-top: 24px; font-size: 14px; color: rgba(255,255,255,0.55); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 28px; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+    .card-dark { background: #111; border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 32px; }
+    .eyebrow {
+      font-size: 12px; text-transform: uppercase; letter-spacing: 3px;
+      color: rgba(255,255,255,0.45); margin-bottom: 16px;
+    }
+    h2 { font-size: 44px; line-height: 1.15; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 20px; }
+    h3 { font-size: 28px; line-height: 1.2; font-weight: 700; margin-bottom: 12px; }
+    p.text, li, .benefit { color: rgba(255,255,255,0.75); font-size: 18px; }
+    ul.clean { list-style: none; }
+    ul.clean li { margin-bottom: 14px; }
+    .section-muted {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+    .benefits-grid, .deliverables-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .benefit {
+      border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05); padding: 20px;
+    }
+    .offer-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: start; }
+    .objection {
+      border-radius: 28px; border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05); padding: 24px; margin-bottom: 20px;
+    }
+    .offer-box {
+      position: sticky; top: 24px; border-radius: 32px;
+      border: 1px solid rgba(255,255,255,0.1); background: #111; padding: 32px;
+    }
+    .old-price { color: rgba(255,255,255,0.4); text-decoration: line-through; font-size: 20px; margin-bottom: 8px; }
+    .price { font-size: 54px; font-weight: 700; margin-bottom: 24px; }
+    .checklist div { color: rgba(255,255,255,0.78); margin-bottom: 12px; font-size: 17px; }
+    .offer-note { margin-top: 16px; font-size: 14px; color: rgba(255,255,255,0.45); text-align: center; }
+    .center { text-align: center; }
+    .center p { max-width: 820px; margin: 0 auto; color: rgba(255,255,255,0.75); font-size: 20px; }
+    .cta-bottom { margin-top: 36px; }
+    @media (max-width: 960px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 34px; }
+      .grid-2, .grid-3, .benefits-grid, .deliverables-grid, .offer-layout { grid-template-columns: 1fr; }
+      .offer-box { position: static; }
+      .hero-inner { padding: 72px 0; }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 64px 0; }
+      h1 { font-size: 34px; }
+      h2 { font-size: 28px; }
+      .hero p, p.text, li, .benefit, .center p { font-size: 16px; }
+      .btn { width: 100%; }
+      .price { font-size: 42px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="badge">Método Emagrecimento Real • 21 dias de aplicação prática</div>
+        <h1>Retome o controle do seu peso em 21 dias sem dieta maluca, sem radicalismo e sem viver recomeçando</h1>
+        <p>Um método prático para organizar sua alimentação, reduzir excessos e criar constância mesmo com rotina corrida.</p>
+        <div class="button-row">
+          <a href="#oferta" class="btn btn-primary">Quero começar agora</a>
+          <a href="#conteudo" class="btn btn-secondary">Ver o que vou receber</a>
+        </div>
+        <div class="hero-note">Feito para quem vive no ciclo de exagero, culpa e recomeço.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card">
+          <div class="eyebrow">Se você se reconhece nisso</div>
+          <h3>Esse produto foi feito para você</h3>
+          <ul class="clean">
+            <li>Você começa dieta e para no meio.</li>
+            <li>Exagera e sente culpa depois.</li>
+            <li>Quer emagrecer, mas não consegue manter constância.</li>
+            <li>Sente que a rotina atrapalha tudo.</li>
+            <li>Quer algo simples, sem extremismo e sem complicação.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="eyebrow">A virada</div>
+          <h3>O problema não é falta de vontade</h3>
+          <p class="text">O problema é tentar seguir estratégias agressivas demais, difíceis demais e incompatíveis com a vida real.</p>
+          <br />
+          <p class="text">O Método Emagrecimento Real foi criado para substituir caos por direção, culpa por controle e recomeço infinito por constância prática.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted">
+    <div class="container">
+      <div style="max-width: 760px; margin-bottom: 40px;">
+        <div class="eyebrow">O método</div>
+        <h2>Método 3C do Emagrecimento Real</h2>
+        <p class="text">Uma estrutura simples para tirar o emagrecimento do campo da tentativa e colocar no campo da execução.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card-dark">
+          <div class="eyebrow">Pilar</div>
+          <h3>Clareza</h3>
+          <p class="text">Entenda o que realmente faz o peso baixar e pare de cair em promessa vazia.</p>
+        </div>
+        <div class="card-dark">
+          <div class="eyebrow">Pilar</div>
+          <h3>Controle</h3>
+          <p class="text">Reduza excessos sem viver em restrição, neura ou dieta impossível de seguir.</p>
+        </div>
+        <div class="card-dark">
+          <div class="eyebrow">Pilar</div>
+          <h3>Constância</h3>
+          <p class="text">Crie uma rotina simples, repetível e compatível com a vida real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="conteudo">
+    <div class="container">
+      <div style="max-width: 760px; margin-bottom: 40px;">
+        <div class="eyebrow">Transformação prática</div>
+        <h2>O que você vai conquistar com esse método</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit">Entender o que realmente faz o peso baixar</div>
+        <div class="benefit">Organizar sua alimentação sem dieta maluca</div>
+        <div class="benefit">Reduzir exageros sem viver em restrição</div>
+        <div class="benefit">Criar constância mesmo com rotina corrida</div>
+        <div class="benefit">Voltar ao plano rápido quando escorregar</div>
+        <div class="benefit">Seguir um plano simples de 21 dias</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted">
+    <div class="container">
+      <div style="max-width: 760px; margin-bottom: 40px;">
+        <div class="eyebrow">Entregáveis</div>
+        <h2>Tudo o que você recebe ao entrar</h2>
+      </div>
+      <div class="deliverables-grid">
+        <div class="card-dark"><h3>Ebook principal — Método Emagrecimento Real</h3><p class="text">O guia completo com a lógica do método e a estrutura para começar do jeito certo.</p></div>
+        <div class="card-dark"><h3>Plano 21 Dias de Controle</h3><p class="text">Um passo a passo simples para sair do caos e construir ritmo.</p></div>
+        <div class="card-dark"><h3>Cardápio Base da Vida Real</h3><p class="text">Sugestões práticas para não depender de improviso na alimentação.</p></div>
+        <div class="card-dark"><h3>Lista de Compras Inteligente</h3><p class="text">Para facilitar sua execução com comida simples e acessível.</p></div>
+        <div class="card-dark"><h3>Checklist Diário de Constância</h3><p class="text">Uma forma objetiva de manter controle sem obsessão.</p></div>
+        <div class="card-dark"><h3>Diário de Progresso Inteligente</h3><p class="text">Acompanhe sua evolução com clareza.</p></div>
+        <div class="card-dark" style="grid-column: 1 / -1;"><h3>Guia Anti-Recaída</h3><p class="text">Saiba exatamente o que fazer quando sair do plano sem abandonar tudo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="offer-layout">
+        <div>
+          <div class="eyebrow">Quebra de objeções</div>
+          <h2>Esse método foi pensado para a vida real</h2>
+          <div class="objection">
+            <h3>“Eu já tentei várias vezes”</h3>
+            <p class="text">Esse método não foi criado para te jogar em mais uma dieta extrema. Ele foi construído para ser simples, executável e sustentável.</p>
+          </div>
+          <div class="objection">
+            <h3>“Minha rotina é corrida”</h3>
+            <p class="text">O foco aqui não é perfeição. É organização mínima e constância possível dentro da vida real.</p>
+          </div>
+          <div class="objection">
+            <h3>“Não quero passar fome”</h3>
+            <p class="text">A proposta não é sofrimento. É melhorar escolhas, reduzir excessos e criar mais controle.</p>
+          </div>
+          <div class="objection">
+            <h3>“Tenho medo de comprar mais do mesmo”</h3>
+            <p class="text">Você recebe um método estruturado com plano de 21 dias, ferramentas práticas e um guia para lidar com recaídas.</p>
+          </div>
+        </div>
+        <div class="offer-box" id="oferta">
+          <div class="eyebrow">Oferta de entrada</div>
+          <h3>Método Emagrecimento Real</h3>
+          <p class="text" style="margin-bottom: 22px;">21 dias para retomar o controle do seu peso com um método simples, prático e possível de seguir.</p>
+          <div class="old-price">De R$ 67,00</div>
+          <div class="price">R$ 29,90</div>
+          <div class="checklist">
+            <div>✔ Ebook principal</div>
+            <div>✔ Plano de 21 dias</div>
+            <div>✔ Cardápio base</div>
+            <div>✔ Lista de compras</div>
+            <div>✔ Checklist diário</div>
+            <div>✔ Diário de progresso</div>
+            <div>✔ Guia anti-recaída</div>
+          </div>
+          <a href="SEU_LINK_DA_KIWIFY" target="_blank" rel="noreferrer" class="btn btn-primary" style="display:block; width:100%; margin-top: 28px;">
+            Quero acessar agora
+          </a>
+          <div class="offer-note">Ideal para quem quer sair do ciclo de exagero, culpa e recomeço.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="container center">
+      <div class="eyebrow">Fechamento</div>
+      <h2 style="max-width: 900px; margin: 0 auto 20px;">Você não precisa de mais uma tentativa frustrada. Precisa de um plano simples que consiga seguir.</h2>
+      <p>O Método Emagrecimento Real foi criado para te ajudar a sair do ciclo de exagero, culpa e recomeço e voltar ao controle com mais clareza, leveza e constância.</p>
+      <div class="cta-bottom">
+        <a href="SEU_LINK_DA_KIWIFY" target="_blank" rel="noreferrer" class="btn btn-primary">
+          Começar agora por R$ 29,90
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
